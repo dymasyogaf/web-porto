@@ -76,12 +76,14 @@ Edit variabel CSS di `assets/css/styles.css`:
 ## 📄 Lisensi
 
 Proyek ini open source - bebas digunakan dan dimodifikasi untuk keperluan pribadi atau komersial.
+Tapi, dengan syarat Lu follow akun Gw. Inget semua yg halal bisa jadi haram karena hal sepele
 
 ## 📞 Kontak
 
 Untuk pertanyaan atau kolaborasi:
-- Email: [email@anda.com]
-- LinkedIn: [linkedin.com/in/namaanda]
+- Email: [dymasyoga11@gmail.com]
+- Instagram: [@dymasyogaf]
+- LinkedIn: [https://www.linkedin.com/in/dymasyogaf/]
 
 ---
 
