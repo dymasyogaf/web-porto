@@ -1,0 +1,156 @@
+/* ========================================
+   PORTOFOLIO 3D - STYLES.CSS
+   ======================================== */
+
+/* CSS Variables */
+:root {
+  --bg: #0b1220;
+  --bg2: #0f1730;
+  --pri: #7dd3fc;
+  --acc: #a78bfa;
+  --txt: #e6f0ff;
+  --mut: #9fb0d0;
+  --card: #121a33;
+  --glass: rgba(255, 255, 255, 0.06);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--txt);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container & Layout */
+.container-pad {
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
+
+.max-w-7xl {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Glass Effect */
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 1rem;
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(135deg, var(--pri), var(--acc));
+  color: #051020;
+  font-weight: 700;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 10px 30px rgba(124, 210, 252, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Tilt Effect */
+.tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.25s ease;
+}
+
+.tilt:hover {
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Project Cards */
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating Blobs */
+.blob {
+  position: fixed;
+  pointer-events: none;
+  filter: blur(40px);
+  opacity: 0.28;
+  mix-blend-mode: screen;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-30px) translateX(20px) scale(1.05); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-4 { gap: 1rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
